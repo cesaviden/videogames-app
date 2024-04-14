@@ -1,0 +1,39 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="max-w-md w-full space-y-8">
+    @if(isAuthenticated) {
+    <div>
+      <div class="flex flex-col items-center">
+        <h1 class="text-4xl font-bold text-primary text-uppercase">
+          Welcome back, {{ username }}!
+        </h1>
+      </div>
+      <div>
+        <p class="text-lg leading-relaxed">
+          Here you can find all the games you want to play with your friends, or
+          just for fun and relaxation.
+        </p>
+      </div>
+      <div class="flex justify-end">
+        <a
+          class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"
+          [routerLink]="['/dashboard']"
+          >List of games</a
+        >
+      </div>
+    </div>
+    } @else {
+    <div class="flex flex-col items-center">
+      <h1 class="text-4xl font-bold text-primary text-uppercase">
+        Welcome to the Store of Games
+      </h1>
+    </div>
+    <div>
+      <p class="text-lg leading-relaxed">
+        Here you can find all the games you want to play with your friends, or
+        just for fun, relaxation or just to play.
+        <b>Log in or register to get started!</b>
+      </p>
+    </div>
+    }
+  </div>
+</div>
