@@ -28,7 +28,7 @@ export class DashboardComponent {
     this.notificationSubscription = this.notificationService.getNotifications().subscribe(message => {
       setTimeout(() => {
         this.errorMessage = '';
-      }, 3000); // 5 segundos de expiracion
+      }, 3000); 
       this.errorMessage = message;
     });
   }
